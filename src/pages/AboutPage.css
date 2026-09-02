@@ -1,0 +1,49 @@
+.about-hero-band {
+  background: var(--pistachio);
+  padding: 3.5rem 0;
+  margin-bottom: 3rem;
+}
+
+.about-hero-band blockquote {
+  font-size: var(--fs-display);
+  font-style: italic;
+  max-width: 14ch;
+}
+
+.about-editorial {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 2rem 3rem;
+}
+
+.about-editorial h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 0.85rem;
+  line-height: var(--lh-display);
+}
+
+.about-editorial p {
+  color: var(--coffee-mid);
+  line-height: 1.55;
+}
+
+.about-editorial p + p {
+  margin-top: 0.85rem;
+}
+
+.about-note {
+  background: var(--sun);
+  border-radius: var(--radius-lg);
+  padding: 1.6rem;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 860px) {
+  .about-editorial {
+    grid-template-columns: 1fr;
+  }
+}

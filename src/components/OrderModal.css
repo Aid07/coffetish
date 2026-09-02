@@ -1,0 +1,189 @@
+.order-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.order-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 22, 20, 0.42);
+}
+
+.order-panel {
+  position: relative;
+  width: min(840px, 100%);
+  max-height: min(88vh, 900px);
+  overflow: auto;
+  background: var(--paper-3);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem 1.3rem 1.2rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.order-head,
+.order-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.order-head h2,
+.order-done h3 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.order-steps {
+  display: flex;
+  gap: 0.8rem;
+  margin: 1rem 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+  flex-wrap: wrap;
+}
+
+.order-steps .is-current {
+  color: var(--coffee);
+  font-weight: 700;
+}
+
+.order-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.order-choice,
+.order-drink {
+  text-align: left;
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.order-choice {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.order-choice.is-selected,
+.order-drink.is-selected {
+  box-shadow: inset 0 0 0 2px var(--coffee);
+  background: var(--spot, var(--lavender));
+}
+
+.order-choice em {
+  display: block;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--coffee);
+  font-size: 0.95rem;
+}
+
+.order-choice span {
+  display: block;
+  font-style: normal;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.order-drink em {
+  display: block;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--coffee);
+  font-size: 1.12rem;
+}
+
+.order-drinks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  max-height: 46vh;
+  overflow: auto;
+}
+
+.order-drink {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.mini-cup {
+  width: 64px;
+  height: auto;
+}
+
+.order-summary {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1rem;
+}
+
+.summary-visual {
+  border-radius: var(--radius-md);
+  padding: 0.2rem;
+}
+
+.order-summary label,
+.qty {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0.8rem 0;
+}
+
+.order-summary input {
+  min-height: 3rem;
+  border-radius: var(--radius-full);
+  border: 0;
+  padding: 0 1rem;
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.qty span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.qty button {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background: var(--sun);
+}
+
+.summary-total {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.order-done {
+  padding: 1.5rem 0;
+}
+
+.order-actions {
+  margin-top: 1.2rem;
+}
+
+.order-actions .btn:disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+@media (max-width: 720px) {
+  .order-grid,
+  .order-drinks,
+  .order-summary {
+    grid-template-columns: 1fr;
+  }
+}

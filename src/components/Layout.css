@@ -1,0 +1,21 @@
+.mobile-cta {
+  position: sticky;
+  bottom: 0;
+  z-index: 30;
+  padding: 0.7rem var(--gutter) calc(0.7rem + env(safe-area-inset-bottom));
+  background: linear-gradient(to top, var(--paper) 70%, transparent);
+}
+
+.mobile-cta .btn {
+  width: 100%;
+}
+
+main {
+  flex: 1;
+}
+
+@media (max-width: 860px) {
+  main {
+    padding-bottom: 4.8rem;
+  }
+}

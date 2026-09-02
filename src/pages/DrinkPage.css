@@ -1,0 +1,62 @@
+.drink-layout h1 {
+  font-size: var(--fs-display);
+  line-height: var(--lh-display);
+}
+
+.drink-layout .lead {
+  line-height: 1.55;
+}
+
+.drink-price {
+  font-size: 2rem;
+  margin-bottom: 1.4rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin: 1.6rem 0 3rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--coffee);
+}
+
+.recommended h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.rec-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.rec-card {
+  transition: transform var(--dur-slow) var(--ease);
+}
+
+.rec-card:hover {
+  transform: translateY(-3px);
+}
+
+.rec-card div {
+  border-radius: var(--radius-md);
+  padding: 0.15rem;
+  margin-bottom: 0.6rem;
+  overflow: hidden;
+  background: #f8f4ec;
+}
+
+.rec-card h3 {
+  font-size: 1.05rem;
+}
+
+.rec-card .price {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 860px) {
+  .rec-grid {
+    grid-template-columns: 1fr;
+  }
+}

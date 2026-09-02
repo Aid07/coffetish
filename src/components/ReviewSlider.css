@@ -1,0 +1,60 @@
+.review-slider {
+  display: grid;
+  gap: 1rem;
+}
+
+.review-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.review-track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 0.6rem;
+  cursor: grab;
+}
+
+.review-track:active {
+  cursor: grabbing;
+}
+
+.review-card {
+  min-width: min(78vw, 340px);
+  scroll-snap-align: start;
+  border-radius: var(--radius-lg);
+  padding: 1.4rem;
+  min-height: 280px;
+}
+
+.review-top {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.avatar {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--paper-3);
+  font-weight: 700;
+  font-size: 0.78rem;
+}
+
+.review-top p,
+.stars {
+  color: var(--coffee-mid);
+  font-size: 0.82rem;
+}
+
+.review-card p:last-child {
+  margin-top: 0.85rem;
+  line-height: 1.55;
+}

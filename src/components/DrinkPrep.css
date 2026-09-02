@@ -1,0 +1,95 @@
+.drink-prep {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1.5rem;
+  align-items: center;
+  border-radius: var(--radius-xl);
+  padding: 1.2rem;
+  background: var(--paper-2);
+  transition: background var(--dur-med) var(--ease);
+}
+
+.drink-prep.is-open {
+  background: var(--wash);
+}
+
+.prep-visual {
+  position: relative;
+  min-height: 360px;
+  display: grid;
+  place-items: center;
+}
+
+.prep-blob {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  border-radius: 58% 42% 62% 38% / 42% 58% 42% 58%;
+  background: color-mix(in srgb, var(--wash) 70%, white);
+  opacity: 0.9;
+}
+
+.prep-cup {
+  position: relative;
+  width: min(280px, 70vw);
+  filter: drop-shadow(var(--shadow-cup));
+}
+
+.prep-label {
+  position: absolute;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.35rem 0.7rem;
+  border-radius: var(--radius-full);
+  background: var(--paper-3);
+  box-shadow: var(--shadow-float);
+  white-space: nowrap;
+}
+
+.prep-label-0 { top: 12%; left: 4%; }
+.prep-label-1 { top: 28%; right: 2%; }
+.prep-label-2 { bottom: 28%; left: 0; }
+.prep-label-3 { bottom: 12%; right: 8%; }
+
+.prep-copy {
+  display: grid;
+  gap: 1rem;
+  justify-items: start;
+}
+
+.prep-nutrition {
+  display: grid;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.prep-nutrition div {
+  display: grid;
+  gap: 0.4rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.prep-nutrition dt {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--coffee-mid);
+}
+
+@media (max-width: 860px) {
+  .drink-prep {
+    grid-template-columns: 1fr;
+    padding: 0.8rem;
+  }
+
+  .prep-visual {
+    min-height: 300px;
+  }
+
+  .prep-label {
+    font-size: 0.68rem;
+    white-space: normal;
+    max-width: 42%;
+  }
+}

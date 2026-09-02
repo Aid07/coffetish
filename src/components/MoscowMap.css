@@ -1,0 +1,9 @@
+.moscow-map {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.moscow-map svg {
+  width: 100%;
+  height: auto;
+}

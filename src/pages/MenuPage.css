@@ -1,0 +1,121 @@
+.page-head h1,
+.article-page h1 {
+  font-size: var(--fs-display);
+  max-width: 16ch;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.2rem;
+}
+
+.filters button {
+  min-height: 2.4rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-full);
+  background: var(--paper-3);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition:
+    background var(--dur-slow) var(--ease),
+    color var(--dur-slow) var(--ease),
+    transform var(--dur-slow) var(--ease);
+}
+
+.filters button:hover {
+  transform: translateY(-1px);
+}
+
+.filters .is-on {
+  background: var(--coffee);
+  color: var(--paper);
+}
+
+.menu-flow {
+  display: grid;
+  gap: 0;
+}
+
+.menu-group {
+  margin-bottom: 3rem;
+}
+
+.menu-group h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: var(--lh-display);
+  margin-bottom: 1.1rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.menu-item {
+  display: grid;
+  grid-template-columns: 148px 1fr;
+  gap: 0.9rem;
+  padding: 0.22rem;
+  border-radius: var(--radius-md);
+  background: var(--paper-2);
+  transition:
+    transform var(--dur-slow) var(--ease),
+    box-shadow var(--dur-slow) var(--ease);
+}
+
+.menu-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-float);
+}
+
+.menu-thumb {
+  border-radius: calc(var(--radius-md) - 2px);
+  padding: 0;
+  overflow: hidden;
+  background: #f8f4ec;
+}
+
+.menu-item-copy {
+  display: grid;
+  align-content: start;
+  gap: 0.5rem;
+  padding: 0.55rem 0.85rem 0.75rem 0;
+}
+
+.menu-item h3 {
+  font-size: 1.15rem;
+  line-height: 1.28;
+}
+
+.menu-item p {
+  color: var(--coffee-mid);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.menu-item .meta {
+  font-size: 0.78rem;
+}
+
+.menu-item .price {
+  font-size: 1.32rem;
+  margin-top: 0.15rem;
+}
+
+@media (max-width: 860px) {
+  .menu-grid,
+  .menu-item {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-item-copy {
+    padding: 0.2rem 0.7rem 0.8rem;
+  }
+}

@@ -1,0 +1,31 @@
+.journal-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.journal-row {
+  border-radius: var(--radius-lg);
+  padding: 1.6rem;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.journal-row.is-lead {
+  align-content: start;
+}
+
+.journal-row span {
+  font-size: 0.78rem;
+  color: var(--coffee-mid);
+}
+
+.journal-row h2 {
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  line-height: var(--lh-display);
+}
+
+.journal-row p {
+  max-width: 54ch;
+  color: var(--coffee-mid);
+  line-height: 1.55;
+}
